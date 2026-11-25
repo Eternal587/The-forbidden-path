@@ -36,12 +36,12 @@
 
 // Music
 var audio = new Audio('ANOTHER HIM.mp3');
+audio.play();
+await sleep(1000)
 if (navigator.getAutoplayPolicy(audio) == "disallowed" || navigator.getAutoplayPolicy(audio) == "allowed-muted") {
   alert("Please enable the ability to autoplay audio!")
   location.href = "2027.html"
 } else {
-  audio.play();
-
   audio.addEventListener("ended", function() {
     audio.play();
   })
