@@ -1,0 +1,48 @@
+<Title>Page 4</Title>
+
+<style>
+  .body {
+    background-color: black;
+    color: white;
+  }
+
+  .buttonsDiv {
+    justify-self: center;
+    justify-content: center;
+    position: fixed;
+  }
+
+  .buttons {
+    justify-self: center;
+    outline-width: 0px;
+    outline-color: black;
+  }
+</style>
+
+<body class="body">
+  Your blood curdles
+  <br>
+
+</body>
+
+ 
+
+<script>
+  // CHEATER!
+  function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  // Music
+  var audio = new Audio('rotting.mp3');
+  if (navigator.getAutoplayPolicy(audio) == "disallowed" || navigator.getAutoplayPolicy(audio) == "allowed-muted") {
+      alert("Please enable the ability to autoplay audio!")
+      location.href = "page4.html"
+  } else {
+      audio.play();
+
+      audio.addEventListener("ended", function() {
+          audio.play();
+      })
+  }
+</script>

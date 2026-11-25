@@ -1,0 +1,216 @@
+<Title>Page 2</Title>
+
+<style>
+  .body {
+    background-color: black;
+    color: white;
+  }
+
+  .buttonsDiv {
+    justify-self: center;
+    justify-content: center;
+    position: fixed;
+  }
+
+  .buttons {
+    justify-self: center;
+    outline-width: 0px;
+    outline-color: black;
+  }
+</style>
+
+<body class="body">
+  <h1>ITS QUIZ TIME!!! PASS ALL THE QUESTIONS OR YOUR GOING BACK TO THE BEGINNING!</h1>
+  <br>
+  
+  <div id="question1">
+      What color did Snipe draw showmaster originally! <br>
+      <button class="false1">Red</button><br>
+      <button class="false1">Green</button><br>
+      <button class="correct1">Blue</button><br>
+      <button class="false1">Gray</button><br>
+  </div>
+  <div id="question2">
+      How many of the original 12 team members still have their original position?<br>
+      [DMR, YoshiBoii, VibingCat, Eamogo, Natural, Dash Collector, Hog, Tristan, Redscar, Co-owner, Rewrite, Rover] <br>
+      <button class="correct2">2-3</button><br>
+      <button class="false2">5-6</button><br>
+      <button class="false2">1</button><br>
+      <button class="false2">0</button><br>
+  </div>
+  <div id="question3">
+      What slander videos are missing to this day?<br>
+      <button class="false3">Slander Part 4</button><br>
+      <button class="correct3">Slander Part 4 & 9</button><br>
+      <button class="false3">Slander Part 7</button><br>
+      <button class="false3">Slander Part 13</button><br>
+  </div>
+  <div id="question4">
+      What does the hidden message in the lobby say<br>
+      <button class="false4">"Follow the hidden key for it will unlock the pages"</button><br>
+      <button class="correct4">"I don't fucking know"</button><br>
+      <button class="false4">"Suck my penis! Suck my penis now!"</button><br>
+      <button class="false4">"Hello everybody my name is Warkiplier and welcome back to sonic.exe the last act..."</button><br>
+  </div>
+  <div id="question5">
+      Last one... In what order did we have contriveries!!!<br>
+      <button class="false5">YoshiBoii, Dash Collector, Redscar</button><br>
+      <button class="false5">Peabody, Peabody, VibingCat, Witch, Hog & Tristan</button><br>
+      <button class="false5">Hog & Tristan, Peabody, DMR, VibingCat, Witch</button><br>
+      <button class="correct5">Hog & Tristan, VibingCat, Peabody, Witch, DMR</button><br>
+  </div>
+
+  
+  <br>
+</body>
+
+ 
+
+<script>
+  // Cheater Cheater Pumpkin Eater
+  // Questions
+  const q1 = document.getElementById("question1")
+  const q2 = document.getElementById("question2")
+  const q3 = document.getElementById("question3")
+  const q4 = document.getElementById("question4")
+  const q5 = document.getElementById("question5")
+
+  // False Answers
+  const f1 = document.querySelectorAll(".false1")
+  const f2 = document.querySelectorAll(".false2")
+  const f3 = document.querySelectorAll(".false3")
+  const f4 = document.querySelectorAll(".false4")
+  const f5 = document.querySelectorAll(".false5")
+
+  // Correct Answers
+  const t1 = document.querySelectorAll(".correct1")
+  const t2 = document.querySelectorAll(".correct2")
+  const t3 = document.querySelectorAll(".correct3")
+  const t4 = document.querySelectorAll(".correct4")
+  const t5 = document.querySelectorAll(".correct5")
+
+  // Hide all questions
+  q2.style.display = "none"
+  q3.style.display = "none"
+  q4.style.display = "none"
+  q5.style.display = "none"
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  // Correct Answers
+  t1.forEach(button => {
+    button.addEventListener("click", function() {
+      q1.style.display = "none"
+      q2.style.display = ""
+      alert("Correct!!! Great Job!! This one was easy though.")
+    })
+  })
+
+  t2.forEach(button => {
+    button.addEventListener("click", function() {
+      q2.style.display = "none"
+      q3.style.display = ""
+      alert("Wowie!")
+    })
+  })
+
+  t3.forEach(button => {
+    button.addEventListener("click", function() {
+      q3.style.display = "none"
+      q4.style.display = ""
+      alert("Your Doing Fantastic!")
+    })
+  })
+
+  t4.forEach(button => {
+    button.addEventListener("click", function() {
+      q4.style.display = "none"
+      q5.style.display = ""
+      alert("Your almost there..")
+    })
+  })
+
+  t5.forEach(button => {
+    button.addEventListener("click", async function() {
+      alert("follow the pages for how they are left out.")
+
+      var audio = new Audio('exit.mp3');
+      audio.play();
+
+      await sleep(5000)
+
+      document.location.href = "page3.html"
+    })
+  })
+
+  // False Answers
+  f1.forEach(button => {
+    button.addEventListener("click", function() {
+      alert("COME ON THIS WAS EASY!")
+      q1.style.display = ""
+      q2.style.display = "none"
+      q3.style.display = "none"
+      q4.style.display = "none"
+      q5.style.display = "none"
+    })
+  })
+
+  f2.forEach(button => {
+    button.addEventListener("click", function() {
+      alert("A little harder, I get it")
+      q1.style.display = ""
+      q2.style.display = "none"
+      q3.style.display = "none"
+      q4.style.display = "none"
+      q5.style.display = "none"
+    })
+  })
+  
+  f3.forEach(button => {
+    button.addEventListener("click", function() {
+      alert("JUST CONTACT VIBINGCAT!")
+      q1.style.display = ""
+      q2.style.display = "none"
+      q3.style.display = "none"
+      q4.style.display = "none"
+      q5.style.display = "none"
+    })
+  })
+
+  f4.forEach(button => {
+    button.addEventListener("click", function() {
+      alert("Did you seriously just try to guess this?")
+      q1.style.display = ""
+      q2.style.display = "none"
+      q3.style.display = "none"
+      q4.style.display = "none"
+      q5.style.display = "none"
+    })
+  })
+
+  f5.forEach(button => {
+    button.addEventListener("click", function() {
+      alert("The serpent who twists and turns will decive all but those who know their fate.")
+      q1.style.display = ""
+      q2.style.display = "none"
+      q3.style.display = "none"
+      q4.style.display = "none"
+      q5.style.display = "none"
+    })
+  })
+
+  // Music
+  var audio = new Audio('greenroom.mp3');
+  if (navigator.getAutoplayPolicy(audio) == "disallowed" || navigator.getAutoplayPolicy(audio) == "allowed-muted") {
+      alert("Please enable the ability to autoplay audio!")
+      location.href = "page2.html"
+  } else {
+      audio.play();
+
+      audio.addEventListener("ended", function() {
+          audio.play();
+      })
+  }
+</script>

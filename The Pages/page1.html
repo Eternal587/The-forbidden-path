@@ -1,0 +1,80 @@
+<Title>Page 1</Title>
+
+<style>
+  .body {
+    background-color: black;
+    color: white;
+  }
+
+  .buttonsDiv {
+    justify-self: center;
+    justify-content: center;
+    position: fixed;
+  }
+
+  .buttons {
+    justify-self: center;
+    outline-width: 0px;
+    outline-color: black;
+  }
+</style>
+
+<body class="body">
+  Your blood curdles
+  <br>Snipe Febuary 2nd 2028 20:12
+  <br>  Yeah Azure?
+  <br>Azure Febuary 2nd 2028 20:12
+  <br>  I spoke with [REDACTED]
+  <br>Snipe Febuary 2nd 2028 20:13
+  <br>  so? What happened? Is he leaving the team 
+  <br>Azure Febuary 2nd 2028 20:13
+  <br>  We should probably call about this. I can't say this in text
+  <br>Snipe Started a call that lasted 10 Minutes
+  <br><br>
+  <h1>I am a choice no one truly wants,<br>
+  A silent answer to unheard taunts.<br>
+  I end a story before its time,<br>
+  Leaving behind questions and unfinished lines.<br>
+  I am not courage, though some may say,<br>
+  I am a tragedy hidden away.<br>
+  What am I?</h1>
+  <br>
+  <input id="answerbox"></input> <button id="answerbutton">Answer</button>
+</body>
+
+ 
+
+<script>
+  const ans = "suicide"
+  const answerbox = document.getElementById("answerbox")
+  const answerbutton = document.getElementById("answerbutton")
+
+  function sleep(ms) {
+      return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  answerbutton.addEventListener("click", async function() {
+    if (answerbox.value == ans) {
+      var audio = new Audio('exit.mp3');
+      audio.play();
+
+      await sleep(5000)
+
+      document.location.href = "page2.html"
+    }
+    alert("Incorrect")
+  })
+
+  // Music
+  var audio = new Audio('rotting.mp3');
+  if (navigator.getAutoplayPolicy(audio) == "disallowed" || navigator.getAutoplayPolicy(audio) == "allowed-muted") {
+      alert("Please enable the ability to autoplay audio!")
+      location.href = "page1.html"
+  } else {
+      audio.play();
+
+      audio.addEventListener("ended", function() {
+          audio.play();
+      })
+  }
+</script>
