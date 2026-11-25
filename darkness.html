@@ -795,7 +795,6 @@
   // Music
   var audio = new Audio('Lullaby.mp3');
   audio.play();
-  await sleep(1000)
   if (navigator.getAutoplayPolicy(audio) == "disallowed" || navigator.getAutoplayPolicy(audio) == "allowed-muted") {
       alert("Please enable the ability to autoplay audio!")
       location.href = "darkness.html"
