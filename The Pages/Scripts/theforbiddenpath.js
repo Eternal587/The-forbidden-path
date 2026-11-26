@@ -15,7 +15,7 @@ if (answerbox.value == ans) {
 
     await sleep(5000)
 
-    document.location.href = "page4.html"
+    document.location.href = "The Past.html"
 }
 alert("Incorrect")
 })
