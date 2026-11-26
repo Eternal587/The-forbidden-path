@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <Title>The Forbidden Future</Title>
 
 <style>
@@ -17,33 +18,24 @@
     outline-width: 0px;
     outline-color: black;
   }
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, calc(-20%));
+  }
 </style>
 
   <body class="body">
   "New year new me!"
   <br>
+
+  <div class="center">
+    <h1 id="Countdown">99 Days, 12:12:12</h1>
+  </div>
 </body>
 
  
 
-<script>
-// Hello? Hello? Hello?
-// Can anybody hear me?
-// I- why am I still here
-// I wanted it to end and im just here.... stuck
-// why have I been forsaken this way
-// djeuihj opewnd eirw vnk fesue vds
-
-// Music
-var audio = new Audio('Audio/ANOTHER HIM.mp3');
-audio.loop = true;
-audio.play().catch(() => {
-  alert("Please enable the ability to autoplay audio! Otherwise you have to click once on every page!")
-
-  audio.play();
-  
-  document.addEventListener("click", function() {
-        audio.play();
-    }, { once: true });
-})
-</script>
+<script src="Scripts/2027.js" defer></script>
