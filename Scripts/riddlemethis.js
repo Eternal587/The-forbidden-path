@@ -91,12 +91,13 @@ button0.addEventListener("click", function() {
 
 // Music
 var audio = new Audio('Audio/Dialtone.mp3');
-audio.play();
-if (navigator.getAutoplayPolicy(audio) == "disallowed" || navigator.getAutoplayPolicy(audio) == "allowed-muted") {
-    alert("Please enable the ability to autoplay audio!")
-    location.href = "riddlemethis.html"
-} else {
-    audio.addEventListener("ended", function() {
+audio.loop = true;
+audio.play().catch(() => {
+  alert("Please enable the ability to autoplay audio! Otherwise you have to click once on every page!")
+
+  audio.play();
+  
+  document.addEventListener("click", function() {
         audio.play();
-    })
-}
+    }, { once: true });
+})
