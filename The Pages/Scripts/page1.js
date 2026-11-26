@@ -14,8 +14,9 @@ if (answerbox.value == ans) {
     await sleep(5000)
 
     document.location.href = "QUIZ TIME!.html"
+} else {
+    alert("Incorrect")
 }
-alert("Incorrect")
 })
 
 // Music

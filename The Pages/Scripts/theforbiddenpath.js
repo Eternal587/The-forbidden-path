@@ -9,15 +9,17 @@ function sleep(ms) {
 // Holyyy cheater
 
 answerbutton.addEventListener("click", async function() {
-if (answerbox.value == ans) {
-    var audio = new Audio('Audio/exit.mp3');
-    audio.play();
+    if (answerbox.value == ans) {
+        var audio = new Audio('Audio/exit.mp3');
+        audio.play();
 
-    await sleep(5000)
+        await sleep(5000)
 
-    document.location.href = "The Past.html"
-}
-alert("Incorrect")
+        document.location.href = "The Past.html"
+    } else {
+        alert("Incorrect")
+    }
+
 })
 
 // Music
