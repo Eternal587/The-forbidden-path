@@ -64,7 +64,3 @@ audio.play().catch(() => {
         audio.play();
     }, { once: true });
 })
-
-audio.addEventListener("ended", function() {
-  audio.play();
-})
