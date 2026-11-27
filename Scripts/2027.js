@@ -1,5 +1,5 @@
   // Time Function
-  const countdownDateMs = Date.UTC(2027, 1, 1, 5, 0, 0, 0) // Midnight, January First, EST
+  const countdownDateMs = Date.UTC(2027, 0, 1, 5, 0, 0, 0) // Midnight, January First, EST
   const timeLabel = document.getElementById("Countdown")
 
   function getTime() {
